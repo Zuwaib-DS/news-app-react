@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card-img, .card-img-bottom, .card-img-top{
+  height: 200px;
+}
+
+.title-section{
+  min-height: 160px;
+}
+
+.font-details{
+  font-size: 12px;
+}
+
+a.no-link{
+  text-decoration: none;
+  color: inherit;
+}
+
+.disabled{
+  cursor: not-allowed;
+}
