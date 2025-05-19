@@ -11,7 +11,7 @@ function NewsItem({
   source,
 }) {
   return (
-    <a href="{url}" target="_blank" className="no-link">
+    <a href={url} target="_blank" className="no-link">
       <div className="card">
         <img src={imageUrl} className="card-img-top" alt={title} />
         <div className="card-body title-section">
@@ -24,7 +24,7 @@ function NewsItem({
           </TooltipControl>
           <TooltipControl text={description}>
             <p className="card-text" title={description}>
-            {description && description.length > 90
+            {description && description.length > 85
               ? `${description.substring(0, 90)}...`
               : description}
           </p>
@@ -32,7 +32,11 @@ function NewsItem({
         </div>
         <ul className="list-group list-group-flush">
           <li className="list-group-item font-details">
-            <strong>Source:</strong> {source}
+            <TooltipControl text={source}>
+                <strong>Source:</strong> {source && source.length > 22
+              ? `${source.substring(0, 22)}...`
+              : source}
+            </TooltipControl>
           </li>
           <li className="list-group-item font-details">
             <strong>Author:</strong>{" "}
