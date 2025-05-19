@@ -15,7 +15,7 @@ function NewsList({category}) {
     let newsApiUrl = `https://newsapi.org/v2/top-headlines?country=us&pageSize=12&page=${page}${category ? `&category=${category}` : ""}`;
     let response = await fetch(newsApiUrl, {
       headers: {
-        "X-Api-Key": "297a87edaa3e4e57ab9273c8cf597481",
+        "X-Api-Key": process.env.REACT_APP_NEWS_API_KEY,
       },
     });
     let data = await response.json();

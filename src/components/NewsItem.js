@@ -17,25 +17,28 @@ function NewsItem({
         <div className="card-body title-section">
           <TooltipControl text={title}>
             <h5 className="card-title">
-            {title && title.length > 45
-              ? `${title.substring(0, 45)}...`
-              : title}
-          </h5>
+              {title && title.length > 45
+                ? `${title.substring(0, 45)}...`
+                : title}
+            </h5>
           </TooltipControl>
           <TooltipControl text={description}>
-            <p className="card-text" title={description}>
-            {description && description.length > 85
-              ? `${description.substring(0, 90)}...`
-              : description}
-          </p>
+            <p className="card-text">
+              {description && description.length > 85
+                ? `${description.substring(0, 90)}...`
+                : description}
+            </p>
           </TooltipControl>
         </div>
         <ul className="list-group list-group-flush">
           <li className="list-group-item font-details">
             <TooltipControl text={source}>
-                <strong>Source:</strong> {source && source.length > 22
-              ? `${source.substring(0, 22)}...`
-              : source}
+              <>
+                <strong>Source:</strong>{" "}
+                {source && source.length > 22
+                  ? `${source.substring(0, 22)}...`
+                  : source}
+              </>
             </TooltipControl>
           </li>
           <li className="list-group-item font-details">
