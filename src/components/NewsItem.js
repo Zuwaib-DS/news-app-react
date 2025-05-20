@@ -33,12 +33,12 @@ function NewsItem({
         <ul className="list-group list-group-flush">
           <li className="list-group-item font-details">
             <TooltipControl text={source}>
-              <>
+              <span>
                 <strong>Source:</strong>{" "}
                 {source && source.length > 22
                   ? `${source.substring(0, 22)}...`
                   : source}
-              </>
+              </span>
             </TooltipControl>
           </li>
           <li className="list-group-item font-details">
